@@ -131,9 +131,11 @@ LUALIB_API int luaopen_ev(lua_State *L) {
     lua_pushnumber(L, SIGTERM);
     lua_setfield(L, -2, "SIGTERM");    
 
+#ifndef __APPLE__
     lua_pushnumber(L, SIGSTKFLT);
     lua_setfield(L, -2, "SIGSTKFLT");    
-
+#endif
+    
     lua_pushnumber(L, SIGCHLD);
     lua_setfield(L, -2, "SIGCHLD");    
 
@@ -170,11 +172,13 @@ LUALIB_API int luaopen_ev(lua_State *L) {
     lua_pushnumber(L, SIGIO);
     lua_setfield(L, -2, "SIGIO");    
 
+#ifndef __APPLE__
     lua_pushnumber(L, SIGPOLL);
     lua_setfield(L, -2, "SIGPOLL");    
 
     lua_pushnumber(L, SIGPWR);
     lua_setfield(L, -2, "SIGPWR");    
+#endif
 
     lua_pushnumber(L, SIGSYS);
     lua_setfield(L, -2, "SIGSYS");    

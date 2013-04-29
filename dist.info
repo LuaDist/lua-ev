@@ -1,0 +1,15 @@
+--- This file is part of LuaDist project
+
+name = "lua-ev"
+version = "1.3"
+
+desc = "Lua integration with libev"
+author = "Brian Maher"
+license = "MIT/X11"
+url = "git://github.com/brimworks/lua-ev.git"
+maintainer = "Peter Drahoš"
+
+depends = {
+  "lua >= 5.1",
+  "libev > 0.1"
+}
